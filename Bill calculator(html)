@@ -2,44 +2,95 @@
 <html>
  <head>
      
-     <title>Bill Calculator</title>
-     <link rel="stylesheet" href="billcalc.css">
+     <title>Electricity Bill Calculator</title>
  </head>   
-   
-   
-   
-   
+ <body>
+   <marquee direction="right" height="50" width="700" bgcolor="red" loop="-1">Today Electricity rate per 1unit - 7</marquee>
 <!-- Write appropriate and complete  HTML  CODE with proper syntax HERE. Also write approriate code to link billcalc.css file from this file.-->
     
  <form onsubmit="return calculateTotalPrice()">
      
-     <label for="productName">Product Name</label>
-     <input type="text" name="productName" id="productName"  required="" placeholder="Product Name" />
-<br>
-     <label for="price">Product Price in Rs.</label>
-     <input type="number" name="price" id="price" value="Product Price" required="" placeholder="Product Price"/><br>
+     <h1><li>FAN</li>
+     <label for="price">Consumption of Watts:</label>
+     <input type="number" name="price" id="price" value="WATTS" required="" placeholder="WATTS"/><br>
+	<label for="hours">Total number of hours:</label>
+	<input type="number" name="hours" id="hours" values="minutes" required="" placeholder="Time"/><br>
+     <label for="qty">Total number of Appliances</label>
+     <input type="number" name="qty" id="qty" value="Enter quantity" required="" min="3" placeholder="Enter Count"/><br>
 
-     <label for="qty">Quantity</label>
-     <input type="number" name="qty" id="qty" value="Enter quantity" required="" min="1" placeholder="Enter quantity"/><br>
-     
+
+	<!-- Tube Light-->
+	
+	<h1><li>Tube Light</li>
+     <label for="price">Consumption of Watts:</label>
+     <input type="number" name="price" id="tprice" value="WATTS" required="" placeholder="WATTS"/><br>
+	<label for="hours">Total number of hours:</label>
+	<input type="number" name="hours" id="thours" values="minutes" required="" placeholder="Time"/><br>
+     <label for="qty">Total number of Appliances</label>
+     <input type="number" name="qty" id="tqty" value="Enter quantity" required="" min="3" placeholder="Enter Count"/><br>
+	
+
+     <!--REFREGIRATOR-->
+	<h1><li>REFREGIRATOR</li>
+     <label for="price">Consumption of Watts:</label>
+     <input type="number" name="price" id="rprice" value="WATTS" required="" placeholder="WATTS"/><br>
+	<label for="hours">Total number of hours:</label>
+	<input type="number" name="hours" id="rhours" values="minutes" required="" placeholder="Time"/><br>
+     <label for="qty">Total number of Appliances</label>
+     <input type="number" name="qty" id="rqty" value="Enter quantity" required="" min="3" placeholder="Enter Count"/><br>
+	
+	<!--TELEVISION-->
+
+	<h1><li>TELEVISION</li>
+     <label for="price">Consumption of Watts:</label>
+     <input type="number" name="price" id="Vprice" value="WATTS" required="" placeholder="WATTS"/><br>
+	<label for="hours">Total number of hours:</label>
+	<input type="number" name="hours" id="Vhours" values="minutes" required="" placeholder="Time"/><br>
+     <label for="qty">Total number of Appliances</label>
+     <input type="number" name="qty" id="Vqty" value="Enter quantity" required="" min="3" placeholder="Enter Count"/><br>
+	<!-- BULB-->
+	<h1><li>BULB</li>
+     <label for="price">Consumption of Watts:</label>
+     <input type="number" name="price" id="bprice" value="WATTS" required="" placeholder="WATTS"/><br>
+	<label for="hours">Total number of hours:</label>
+	<input type="number" name="hours" id="bhours" values="minutes" required="" placeholder="Time"/><br>
+     <label for="qty">Total number of Appliances</label>
+     <input type="number" name="qty" id="bqty" value="Enter quantity" required="" min="3" placeholder="Enter Count"/><br>
+	
+	<!--mixer-->
+
+	<h1><li>MIXER</li>
+     <label for="price">Consumption of Watts:</label>
+     <input type="number" name="price" id="mprice" value="WATTS" required="" placeholder="WATTS"/><br>
+	<label for="hours">Total number of hours:</label>
+	<input type="number" name="hours" id="mhours" values="minutes" required="" placeholder="Time"/><br>
+     <label for="qty">Total number of Appliances</label>
+     <input type="number" name="qty" id="mqty" value="Enter quantity" required="" min="3" placeholder="Enter Count"/><br>
+
+	<!-- MOBILE CHARGER-->
+	<h1><li>BOBILE CHARGER</li>
+	<label for="price">Consumption of Watts:</label>
+     <input type="number" name="price" id="mcprice" value="WATTS" required="" placeholder="WATTS"/><br>
+	<label for="hours">Total number of hours:</label>
+	<input type="number" name="hours" id="mchours" values="minutes" required="" placeholder="Time"/><br>
+     <label for="qty">Total number of Appliances</label>
+     <input type="number" name="qty" id="mcqty" value="Enter quantity" required="" min="3" placeholder="Enter Count"/><br>
+
      <label for="totalprice">Total Price in Rs.</label>
      <output for="price qty" id="totalprice" placeholder=" "></output><br>
      
-     <input type="submit" name="submit" id="submit" value="Submit" />
-     
+     <input type="submit" name="Calculate" id="submit" value="Calculate" /></h1>     
 
  </form> 
  <script>
     function calculateTotalPrice()
  {
-  totalprice.innerHTML = price.value*qty.value;
+  totalprice.innerHTML = 7*mcprice.value*mcqty.value*mchours.value+7*price.value*qty.value*hours.value+7*bprice.value*bqty.value*bhours.value+7*tprice.value*tqty.value*thours.value+7*rprice.value*rqty.value*rhours.value+7*Vprice.value*Vqty.value*Vhours.value+7*mprice.value*mqty.value*mhours.value;
    
   return false; 
  }
-  </script>  
-    
-    
-    
-    
-    
+  </script>
+	<!-- TUBE LIGHT----->
+
+</body>
 </html>
